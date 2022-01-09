@@ -5,9 +5,9 @@ import { HStack, Icon } from '@chakra-ui/react';
 export function NotificationNav() {
     return (
         <HStack
-            spacing={['6', '8']}
-            mx={['6', '8']}
-            pr={['6', '8']}
+            spacing={{ base: '6', md: '8' }}
+            mx={{ base: '6', md: '8' }}
+            pr={{ base: '6', md: '8' }}
             py="1"
             color="gray.300"
             borderRightWidth={1}
