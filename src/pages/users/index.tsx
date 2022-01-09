@@ -16,11 +16,11 @@ import {
     Tr,
 } from '@chakra-ui/react';
 
+import { Header } from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
-import { Header } from '../../components/header';
 
-export default function UserList() {
+export default function ListUsers() {
     return (
         <Box>
             <Header />
@@ -63,9 +63,7 @@ export default function UserList() {
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">
-                                            Paulo André
-                                        </Text>
+                                        <Text fontWeight="bold">Paulo André</Text>
                                         <Text fontSize="sm" color="gray.300">
                                             pauloandre@stagerun.com.br
                                         </Text>
@@ -79,10 +77,7 @@ export default function UserList() {
                                         fontSize="sm"
                                         colorScheme="purple"
                                         leftIcon={
-                                            <Icon
-                                                as={RiPencilLine}
-                                                fontSize="16"
-                                            />
+                                            <Icon as={RiPencilLine} fontSize="16" />
                                         }
                                     >
                                         Editar
@@ -95,9 +90,7 @@ export default function UserList() {
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">
-                                            Paulo André
-                                        </Text>
+                                        <Text fontWeight="bold">Paulo André</Text>
                                         <Text fontSize="sm" color="gray.300">
                                             pauloandre@stagerun.com.br
                                         </Text>
@@ -111,10 +104,7 @@ export default function UserList() {
                                         fontSize="sm"
                                         colorScheme="purple"
                                         leftIcon={
-                                            <Icon
-                                                as={RiPencilLine}
-                                                fontSize="16"
-                                            />
+                                            <Icon as={RiPencilLine} fontSize="16" />
                                         }
                                     >
                                         Editar
@@ -127,9 +117,7 @@ export default function UserList() {
                                 </Td>
                                 <Td>
                                     <Box>
-                                        <Text fontWeight="bold">
-                                            Paulo André
-                                        </Text>
+                                        <Text fontWeight="bold">Paulo André</Text>
                                         <Text fontSize="sm" color="gray.300">
                                             pauloandre@stagerun.com.br
                                         </Text>
@@ -143,10 +131,7 @@ export default function UserList() {
                                         fontSize="sm"
                                         colorScheme="purple"
                                         leftIcon={
-                                            <Icon
-                                                as={RiPencilLine}
-                                                fontSize="16"
-                                            />
+                                            <Icon as={RiPencilLine} fontSize="16" />
                                         }
                                     >
                                         Editar
