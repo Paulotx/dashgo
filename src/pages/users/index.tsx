@@ -14,6 +14,7 @@ import {
     Th,
     Thead,
     Tr,
+    useBreakpointValue,
 } from '@chakra-ui/react';
 
 import { Header } from '../../components/Header';
@@ -21,11 +22,16 @@ import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
 
 export default function ListUsers() {
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    });
+
     return (
         <Box>
             <Header />
 
-            <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
+            <Flex my="6" maxWidth={1480} mx="auto" px={{ base: '4', lg: '6' }}>
                 <Sidebar />
 
                 <Box flex="1" borderRadius={8} bg="gray.800" p="8">
@@ -48,17 +54,21 @@ export default function ListUsers() {
                     <Table colorScheme="whiteAlpha">
                         <Thead>
                             <Tr>
-                                <Th px="6" color="gray.300" width="8">
+                                <Th
+                                    px={{ base: '4', lg: '6' }}
+                                    color="gray.300"
+                                    width="8"
+                                >
                                     <Checkbox colorScheme="pink" />
                                 </Th>
                                 <Th>Usuário</Th>
-                                <Th>Data de cadastro</Th>
-                                <Th width="8" />
+                                {isWideVersion && <Th>Data de cadastro</Th>}
+                                {isWideVersion && <Th width="8" />}
                             </Tr>
                         </Thead>
                         <Tbody>
                             <Tr>
-                                <Td px="6">
+                                <Td px={{ base: '4', lg: '6' }}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
                                 <Td>
@@ -69,23 +79,27 @@ export default function ListUsers() {
                                         </Text>
                                     </Box>
                                 </Td>
-                                <Td>08 de janeiro de 2022</Td>
-                                <Td>
-                                    <Button
-                                        as="a"
-                                        size="sm"
-                                        fontSize="sm"
-                                        colorScheme="purple"
-                                        leftIcon={
-                                            <Icon as={RiPencilLine} fontSize="16" />
-                                        }
-                                    >
-                                        Editar
-                                    </Button>
-                                </Td>
+                                {isWideVersion && <Td>08 de janeiro de 2022</Td>}
+                                {isWideVersion && (
+                                    <Td px={{ base: '4', lg: '6' }}>
+                                        <Button
+                                            as="a"
+                                            size="sm"
+                                            fontSize="sm"
+                                            colorScheme="purple"
+                                        >
+                                            <Icon
+                                                as={RiPencilLine}
+                                                fontSize="16"
+                                                mr={isWideVersion ? '2' : '0'}
+                                            />
+                                            {isWideVersion && 'Editar'}
+                                        </Button>
+                                    </Td>
+                                )}
                             </Tr>
                             <Tr>
-                                <Td px="6">
+                                <Td px={{ base: '4', lg: '6' }}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
                                 <Td>
@@ -96,23 +110,27 @@ export default function ListUsers() {
                                         </Text>
                                     </Box>
                                 </Td>
-                                <Td>08 de janeiro de 2022</Td>
-                                <Td>
-                                    <Button
-                                        as="a"
-                                        size="sm"
-                                        fontSize="sm"
-                                        colorScheme="purple"
-                                        leftIcon={
-                                            <Icon as={RiPencilLine} fontSize="16" />
-                                        }
-                                    >
-                                        Editar
-                                    </Button>
-                                </Td>
+                                {isWideVersion && <Td>08 de janeiro de 2022</Td>}
+                                {isWideVersion && (
+                                    <Td px={{ base: '4', lg: '6' }}>
+                                        <Button
+                                            as="a"
+                                            size="sm"
+                                            fontSize="sm"
+                                            colorScheme="purple"
+                                        >
+                                            <Icon
+                                                as={RiPencilLine}
+                                                fontSize="16"
+                                                mr={isWideVersion ? '2' : '0'}
+                                            />
+                                            {isWideVersion && 'Editar'}
+                                        </Button>
+                                    </Td>
+                                )}
                             </Tr>
                             <Tr>
-                                <Td px="6">
+                                <Td px={{ base: '4', lg: '6' }}>
                                     <Checkbox colorScheme="pink" />
                                 </Td>
                                 <Td>
@@ -123,20 +141,24 @@ export default function ListUsers() {
                                         </Text>
                                     </Box>
                                 </Td>
-                                <Td>08 de janeiro de 2022</Td>
-                                <Td>
-                                    <Button
-                                        as="a"
-                                        size="sm"
-                                        fontSize="sm"
-                                        colorScheme="purple"
-                                        leftIcon={
-                                            <Icon as={RiPencilLine} fontSize="16" />
-                                        }
-                                    >
-                                        Editar
-                                    </Button>
-                                </Td>
+                                {isWideVersion && <Td>08 de janeiro de 2022</Td>}
+                                {isWideVersion && (
+                                    <Td px={{ base: '4', lg: '6' }}>
+                                        <Button
+                                            as="a"
+                                            size="sm"
+                                            fontSize="sm"
+                                            colorScheme="purple"
+                                        >
+                                            <Icon
+                                                as={RiPencilLine}
+                                                fontSize="16"
+                                                mr={isWideVersion ? '2' : '0'}
+                                            />
+                                            {isWideVersion && 'Editar'}
+                                        </Button>
+                                    </Td>
+                                )}
                             </Tr>
                         </Tbody>
                     </Table>
