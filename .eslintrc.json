@@ -26,6 +26,7 @@
         "import"
     ],
     "rules": {
+        "react/function-component-definition": "off",
         "react/react-in-jsx-scope": "off",
         "react-hooks/exhaustive-deps": "off",
         "react-hooks/rules-of-hooks": "error",
@@ -65,7 +66,7 @@
               ],
               "alphabetize": { "order": "asc", "ignoreCase": false }
             }
-          ]
+        ]
     },
     "settings": {
         "import/resolver": {
